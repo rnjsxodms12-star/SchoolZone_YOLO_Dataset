@@ -1,0 +1,7 @@
+path: /content/SchoolZone_YOLO_Dataset
+train: train/images
+val: val/images
+test: test/images
+
+nc: 3
+names: ['person', 'vehicle', 'road_etc']
