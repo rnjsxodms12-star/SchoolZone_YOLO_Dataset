@@ -18,4 +18,4 @@ SchoolZone_YOLO_Dataset/
  ├── test/
  └── data.yaml
 
- 자세한 데이터 전처리 및 학습 과정은 `실험과정.txt`를 참고해주세요.
+ 자세한 데이터 전처리 및 학습 과정은 `실험과정설명.txt`를 참고해주세요.
