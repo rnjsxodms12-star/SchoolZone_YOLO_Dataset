@@ -1,0 +1,38 @@
+과정: source  -> 어린이_폴더_파일구조.jpeg -> 어린이보호구역.txt 
+-> 어린이_폴더_파일구조.jpeg 선택 다운로드 -> leaf_dirs.txt
+-> ex_001.ipynb -> (train, val, test 데이터 분할) -> SchoolZone_YOLO_Dataset 생성
+-> yo_resizing_640x288.ipynb -> (리사이즈) 
+-> SchoolZone_YOLO_Dataset 폴더의 zip화 -> colab -> leaf폴더 이후 파일용량 확인 
+-> SchoolZone_YOLO_Dataset.zip 구글 드라이브에 저장 
+-> schoolzone_colab.ipynb -> (코렙 리소스 런타임 최대 4시간+1에폭당 30분)
+-> (진행중) -> -> 연결 끊김 -> (이어가기 코드o) -> 이어가기 코드 문제없는 것 확인 
+---
+목표:  결과물로 정리된 데이터셋(YOLO26 학습, 검증, 테스트)+data.yaml, 데이터셋으로 학습된 모델(best.pt), 노트북
+
+정리된 데이터셋(YOLO26 학습, 검증, 테스트)+data.yaml -> 과정: 순서대로 이동.
+data.yamal은 코렙용으로 깃허브에 있음.  
+모델(best.pt)은 남은 시간상 불가능하므로, schoolzone_Project의 하위폴더인 train_run_01의 하위폴더인 weights에 (6에폭 직후에) 생성된 usable model인 
+best.pt, epoch0.pt, last.pt 3개를 올림. 필요한 노트북은 깃허브에 있음.
+best.pt, epoch0.pt, last.pt를 만든 노트북은 schoolzone_colab.ipynb임.
+
+※ Colab 무료 환경의 시간 제한으로 인해 전체 epoch 학습은 수행하지 못했으나,
+중간 저장된 checkpoint(best.pt, last.pt)를 활용하여 이후 추가 학습이 가능하도록 구성함.
+
+- best.pt: 최종 성능 모델 [best.pt: 학습 중 가장 성능이 좋았던 모델 (현재 기준)]
+- last.pt: 이어서 학습 가능한 체크포인트
+- epoch*.pt: 특정 epoch 시점의 체크포인트 (학습 복원 또는 분석용)
+
+project/
+ ├── dataset/        ← ❌ 실제 데이터 X
+ │    └── README.md  ← ✅ 데이터 설명 + 다운로드 방법
+ ├── notebooks/
+ ├── weights/
+ │    ├── best.pt
+ │    ├── last.pt
+ │    └── epoch0.pt
+ └── README.md
+
+※ 데이터셋은 용량 문제로 GitHub에 포함하지 않았으며,
+AIHub 원본 데이터 및 전처리 과정을 통해 동일하게 재현 가능합니다.
+
+추가적으로 모델의 추론 결과 이미지는 `results/` 폴더에 포함되어 있습니다.
