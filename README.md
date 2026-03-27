@@ -6,9 +6,11 @@ source: https://aihub.or.kr/aihubdata/data/view.do?pageIndex=1&currMenu=115&topM
 
 본 프로젝트에서 사용된 데이터셋은 용량 문제로 GitHub에 포함하지 않았습니다.
 
-## 다운로드 방법
-- AIHub 원본 데이터: (링크:source)
+## Download
+- AIHub에서 원본 데이터 다운로드 후 사용
+- 상세 전처리 과정은 `실험과정.txt` 참고
 
+  
 ## 데이터 구조
 SchoolZone_YOLO_Dataset/
  ├── train/
@@ -16,4 +18,4 @@ SchoolZone_YOLO_Dataset/
  ├── test/
  └── data.yaml
 
- 자세한 부분은 실험과정설명.txt를 참고해주시면 감사하겠습니다.
+ 자세한 데이터 전처리 및 학습 과정은 `실험과정.txt`를 참고해주세요.
