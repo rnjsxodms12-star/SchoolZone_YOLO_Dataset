@@ -8,7 +8,7 @@ source: https://aihub.or.kr/aihubdata/data/view.do?pageIndex=1&currMenu=115&topM
 
 ## Download
 - AIHub에서 원본 데이터 다운로드 후 사용
-- 상세 전처리 과정은 `실험과정.txt` 참고
+- 상세 전처리 과정은 `실험과정설명.txt` 참고
 
   
 ## 데이터 구조
